@@ -34,3 +34,23 @@ names.forEach(element => {
     }
 });
 
+var nonBating = ['https://s3.ap-south-1.amazonaws.com/kalvi-education.github.io/front-end-web-development/cricpro-suresh-raina.jpg', 'https://s3.ap-south-1.amazonaws.com/kalvi-education.github.io/front-end-web-development/cricpro-harbhajan.jpg', 'https://s3.ap-south-1.amazonaws.com/kalvi-education.github.io/front-end-web-development/cricpro-zaheer-khan.jpg', 'https://s3.ap-south-1.amazonaws.com/kalvi-education.github.io/front-end-web-development/cricpro-munaf-patel.jpg', 'https://s3.ap-south-1.amazonaws.com/kalvi-education.github.io/front-end-web-development/cricpro-sreeshanth.jpg']
+
+console.log(nonBating)
+var persons = document.getElementsByClassName('persons')
+console.log(persons)
+
+for (let i=0; i<persons.length;i++){
+    persons[i].addEventListener('click', ()=>{
+        IMG = document.getElementById('image')
+        IMG.src = nonBating[i]
+        if (tog){
+            IMG.style.display = 'block'
+            tog = false
+        }
+        else{
+            IMG.style.display = 'none'
+            tog = true
+        }
+    })
+}
